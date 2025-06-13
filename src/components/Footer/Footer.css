@@ -1,0 +1,102 @@
+/* Make sure html and body take full height for proper rendering */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container {
+  background-color: #6f4e37; /* dark background */
+  color: #ffff;
+  padding: 40px 20px 20px;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Force footer to stretch fully */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.footer-title {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #f0a500; /* accent */
+}
+
+.footer-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffff;
+}
+
+.footer-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #f0a500;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #f0a500;
+  outline: none;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  color: #ffff;
+  font-size: 0.9rem;
+}
+
+/* Remove any margin collapse */
+.footer-content,
+.footer-bottom {
+  padding-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
